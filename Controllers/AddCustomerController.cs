@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ApiWeb.Models.AddCostumer;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiWeb.Controllers
@@ -10,7 +10,7 @@ namespace ApiWeb.Controllers
         [HttpPost]
         public IActionResult AddCustomer(AddCustomerInput input)
         {
-            
+            return Created("", input);
         }
     }
 }

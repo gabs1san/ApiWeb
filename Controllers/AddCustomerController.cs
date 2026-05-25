@@ -19,7 +19,7 @@ namespace ApiWeb.Controllers
         public IActionResult AddCustomer(AddCustomerInput input)
         {
             var customer = new Domain.Entities.Customer(input.Name, input.Email, input.Document);
-            _addCustomerUseCase.AddCurstomerUseCase(customer);
+            _addCustomerUseCase.AddCurstomer(customer);
             return Created("", customer);
         }
     }

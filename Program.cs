@@ -1,4 +1,9 @@
 
+using Aplication.UseCases.AddCustomer;
+using Domain.Contracts.Repositories.AddCustomer;
+using Domain.Contracts.UseCases;
+using Infra.Repository.Repositories.AddCustomer;
+
 namespace ApiWeb
 {
     public class Program
@@ -8,6 +13,8 @@ namespace ApiWeb
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton<IAddCustomerRepository, AddCustomerRepository>();
+            builder.Services.AddScoped<IAddCurstomerUseCase, AddCustomerUseCase>();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

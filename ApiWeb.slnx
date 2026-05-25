@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="../Aplication/Aplication.csproj" />
   <Project Path="../Domain/Domain.csproj" />
+  <Project Path="../Infra.Repository/Infra.Repository.csproj" Id="c91268d9-0b81-4609-a66f-d425572c6a9e" />
   <Project Path="ApiWeb.csproj" />
 </Solution>
